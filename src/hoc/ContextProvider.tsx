@@ -1,8 +1,6 @@
 import {createContext, FC, PropsWithChildren, useState} from "react";
 
-
-
-const Context = createContext<>(null)
+const Context = createContext<void>(null)
 interface IProps extends PropsWithChildren {
 
 }
@@ -11,14 +9,14 @@ const ContextProvider: FC<IProps> = ({children}) => {
 
     const [trigger, setTrigger] = useState(null)
     const changeTrigger = () => {
-        setTrigger(prev => !prev)
+        // setTrigger(prev => !prev)
     }
 
     return (
         <div>
-            <Context.Provider value={}>
+            {/*<Context.Provider value={void}>*/}
                 {children}
-            </Context.Provider>
+            {/*</Context.Provider>*/}
         </div>
     );
 };

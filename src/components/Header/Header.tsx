@@ -4,12 +4,12 @@ interface IProps extends PropsWithChildren {
 
 }
 
-const MovieDetailsPage: FC<IProps> = () => {
+const Header: FC<IProps> = () => {
     return (
         <div>
-            MovieDetailsPage
+            <h1>Header</h1>
         </div>
     );
 };
 
-export {MovieDetailsPage};
+export {Header};
