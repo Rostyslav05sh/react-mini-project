@@ -18,7 +18,7 @@ const MoviesList: FC<IProps> = () => {
 
     return (
         <div>
-            {/*{movies.results.map(movie =>  <MoviesListCard key={movie.id} movie={movie}/>)}*/}
+            {/*{movies.results.map(result =>  <MoviesListCard key={result.id} result={result}/>)}*/}
             {movies && <MoviesListCard movies={movies}/>}
             <button>prev</button>
             <button>next</button>

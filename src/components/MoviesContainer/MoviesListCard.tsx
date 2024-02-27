@@ -9,15 +9,17 @@ const MoviesListCard: FC<IProps> = ({movies}) => {
 
     const {page, results} = movies;
 
-    const [poster, setPoster] = useState<IMovieRes[]>([])
+    const [poster, setPoster] = useState<IMovieRes>()
+
 
     useEffect(() => {
 
-    }, []);
+        }, []);
 
     return (
         <div>
             <div>page: {page}</div>
+            <div>title: {results[0].title}</div>
         </div>
     );
 };
