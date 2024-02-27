@@ -1,8 +1,9 @@
-const baseURL = 'https://developers.themoviedb.org/3'
+const baseURL = 'https://api.themoviedb.org/3'
 
-const movies = '/discover/movie'
 const genres = '/genre/movie/list'
 const poster ='https://image.tmdb.org/t/p/w500'
+const movies = '/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc'
+
 
 const urls = {
     movies: {
@@ -18,3 +19,5 @@ export {
     baseURL,
     urls
 }
+
+

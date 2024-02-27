@@ -1,18 +1,23 @@
-import {FC, PropsWithChildren} from "react";
-import {IMovie} from "../../interfaces";
+import {FC, PropsWithChildren, useEffect, useState} from "react";
+import {IMovie, IMovieRes} from "../../interfaces";
 
 interface IProps extends PropsWithChildren {
-movie: IMovie
+    movies:IMovie
 }
 
-const MoviesListCard: FC<IProps> = ({movie}) => {
+const MoviesListCard: FC<IProps> = ({movies}) => {
 
-    const {results,page} = movie;
+    const {page, results} = movies;
+
+    const [poster, setPoster] = useState<IMovieRes[]>([])
+
+    useEffect(() => {
+
+    }, []);
 
     return (
         <div>
             <div>page: {page}</div>
-            <h1>sfg</h1>
         </div>
     );
 };
