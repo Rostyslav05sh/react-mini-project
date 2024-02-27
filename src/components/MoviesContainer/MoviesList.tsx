@@ -37,8 +37,8 @@ const MoviesList: FC<IProps> = () => {
     return (
         <div>
             {movies.map(movie =>  <MoviesListCard key={movie.results[0].id} movie={movie}/>)}
-            <button disabled={prevNext.prev <= 0} onClick={prev}>prev</button>
-            <button disabled={prevNext.next} onClick={next}>next</button>
+            <button disabled={!prevNext.prev} onClick={prev}>prev</button>
+            <button disabled={!prevNext.next} onClick={next}>next</button>
         </div>
     );
 };
