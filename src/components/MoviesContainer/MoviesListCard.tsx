@@ -9,7 +9,7 @@ const MoviesListCard: FC<IProps> = ({movies}) => {
 
     const {page, results} = movies;
 
-    const [poster, setPoster] = useState<IMovieRes>()
+    const [image, Image] = useState<IMovieRes>()
 
 
     useEffect(() => {
@@ -20,6 +20,7 @@ const MoviesListCard: FC<IProps> = ({movies}) => {
         <div>
             <div>page: {page}</div>
             <div>title: {results[0].title}</div>
+            <div>title: {results[1].title}</div>
         </div>
     );
 };

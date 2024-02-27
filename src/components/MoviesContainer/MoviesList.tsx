@@ -13,7 +13,7 @@ const MoviesList: FC<IProps> = () => {
     movieService.getAll().then(({data}) => console.log(data))
 
     useEffect(() => {
-        movieService.getAll().then(({data})=> setMovies(data)
+        movieService.getAll().then(({data})=> setMovies(data),
         )}, []);
 
     return (
