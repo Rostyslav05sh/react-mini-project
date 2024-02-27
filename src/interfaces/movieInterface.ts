@@ -1,5 +1,5 @@
 export interface IMovie {
-    page: number;
+    page: number | null;
     results: IMovieRes[];
     total_pages?: number;
     total_results?: number;
