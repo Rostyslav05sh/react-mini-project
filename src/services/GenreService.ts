@@ -1,10 +1,10 @@
 import {urls} from "../constants";
 import {IRes} from "../types";
-import {IGenre} from "../interfaces";
+import {IGenres} from "../interfaces";
 import {apiService} from "./ApiService";
 
 const genreService = {
-    getAll: ():IRes<IGenre[]> => apiService.get(urls.genres.base)
+    getAll: ():IRes<IGenres> => apiService.get(urls.genres.base)
 }
 
 export {

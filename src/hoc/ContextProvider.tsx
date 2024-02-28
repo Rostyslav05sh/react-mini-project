@@ -1,22 +1,22 @@
 import {createContext, FC, PropsWithChildren, useState} from "react";
 
-const Context = createContext<void>(null)
+const Context = createContext(null)
 interface IProps extends PropsWithChildren {
 
 }
 
 const ContextProvider: FC<IProps> = ({children}) => {
 
-    const [trigger, setTrigger] = useState(null)
-    const changeTrigger = () => {
-        // setTrigger(prev => !prev)
+    const [themeSwitch, setThemeSwitch] = useState(null)
+    const themeSwitcher = () => {
+        // setThemeSwitch()
     }
 
     return (
         <div>
-            {/*<Context.Provider value={void}>*/}
+            <Context.Provider value={themeSwitch}>
                 {children}
-            {/*</Context.Provider>*/}
+            </Context.Provider>
         </div>
     );
 };

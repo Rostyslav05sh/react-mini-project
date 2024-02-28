@@ -1,2 +1,2 @@
 export * from './movieInterface'
-export * from './genresType'
+export * from './genresInterface'

@@ -1,16 +1,24 @@
 import {useSearchParams} from "react-router-dom";
 
-const UsePageQuery= () => {
+const usePageQuery= () => {
 
     const [query, setQuery] = useSearchParams({page: '1'});
+         const page = query.get('page')
 
-    const page = query.get('page')
+    return {
+    page,
+        prev: () =>  setQuery(prev => {
+            prev.set('page', (+prev.get('page') - 1).toString())
+            return prev
+        }),
 
-
-
-    return (
-       <div></div>
-    )
+    next: () => setQuery(prev => {
+            prev.set('page', (+prev.get('page') + 1).toString())
+            return prev
+        })
+    }
 };
 
-export {UsePageQuery};
+export {
+    usePageQuery
+};
