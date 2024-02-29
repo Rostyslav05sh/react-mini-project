@@ -1,5 +1,6 @@
-import {IGebresRes, IMovie} from "../interfaces";
 import React, {useEffect, useState} from "react";
+
+import {IGebresRes, IMovie} from "../interfaces";
 import {genreService} from "../services";
 import {useAppLocation} from "../hooks/useAppLocation";
 import {MoviesByGenre} from "../components/GenresContainer/MoviesByGenre";
@@ -22,6 +23,7 @@ const GenresPage= () => {
     }, [genre.id, page]);
 
     const movies = movieByGenre.results
+
 
     return (
         <div>

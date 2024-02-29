@@ -1,3 +1,4 @@
+import {ISearchKeyWord} from "../interfaces/searchInterface";
 
 const baseURL = 'https://api.themoviedb.org/3'
 const genres = '/genre/movie/list'
@@ -6,6 +7,7 @@ const movies = '/discover/movie'
 const movieIdFind = '/movie'
 const genre = '/genre'
 const genreMovies = '/movies'
+const search = '/search/keyword?query='
 
 const urls = {
     movies: {
@@ -17,6 +19,9 @@ const urls = {
     genres: {
         base: genres,
         moviesByGenres:(id:string) => `${genre}/${id}${genreMovies}`
+    },
+    search: {
+        searchByKeyWord: (word:string) => `${search}/${word}`
     }
 }
 
