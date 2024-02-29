@@ -1,9 +1,8 @@
-import {Outlet} from "react-router-dom";
+import {SearchForm} from "../components/SearchContainer/SearchForm";
 
 const SearchPage = () => {
     return (
         <div>
-            <Outlet/>
         </div>
     );
 };

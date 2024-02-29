@@ -16,7 +16,7 @@ const SearchMoviesByKeyWord: FC<IProps> = ({movieByKeyWord}) => {
     return (
         <div>
             <div>title: {title}</div>
-            <img src={image} alt="poster"/>
+            <img src={image} alt={`${title} poster`}/>
             <Rating name="half-rating-read" defaultValue={vote_average / 2} precision={0.5} readOnly />
         </div>
     );

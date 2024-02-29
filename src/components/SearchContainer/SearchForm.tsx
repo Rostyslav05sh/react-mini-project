@@ -1,7 +1,9 @@
 import {SubmitHandler, useForm} from "react-hook-form";
-import React, {useState} from "react";
-import {SearchContainer} from "./SearchContainer";
+import React, {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
+import {ISearch} from "../../interfaces/searchInterface";
+import {searchService} from "../../services/SearchService";
+import {Search} from "./Search";
 
 const SearchForm = () => {
 
@@ -13,7 +15,15 @@ const SearchForm = () => {
         setKeyWord(query.keyWord)
         reset()
     }
-    console.log(keyWord)
+    console.log(keyWord+ 'dgsk;lk;dsgn')
+
+
+    const [keyWords, setkeyWords] = useState<ISearch>({page:null, results: []})
+    useEffect(() => {
+        searchService.getAllByKeyWord(keyWord).then(({data}) => setkeyWords(data))
+    }, [keyWord]);
+
+    const words = keyWords.results
 
     return (
         <div>
@@ -21,7 +31,8 @@ const SearchForm = () => {
                 <input type="text" placeholder={'Search movie'} {...register('keyWord')}/>
                 <button onClick={() => {navigate('search', {state: {keyWord}})}}>Search</button>
             </form>
-            <SearchContainer keyWord={keyWord}/>
+            {/*<SearchContainer keyWord={keyWord}/>*/}
+            {words.map(word => <Search key={word.id} word={word}/>)}
         </div>
     );
 };

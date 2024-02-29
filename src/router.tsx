@@ -5,8 +5,8 @@ import {GenresPage, MoviesPage} from "./pages";
 import {MainLayout} from "./layouts";
 import {MovieInfoPage} from "./pages/MovieInfoPage";
 import {SearchPage} from "./pages/SearchPage";
-import {keyboard} from "@testing-library/user-event/dist/keyboard";
-import {SearchContainer} from "./components/SearchContainer/SearchContainer";
+import {SearchMoviesByKeyWord} from "./components/SearchContainer/SearchMoviesByKeyWord";
+import {SearchForm} from "./components/SearchContainer/SearchForm";
 const router = createBrowserRouter([
     {
         path: '', element: <MainLayout/>, children: [
@@ -22,16 +22,12 @@ const router = createBrowserRouter([
                     {
                         path: 'movieInfo', element: <MovieInfoPage/>
                     },
-            {
-                path: '/genre/:id', element: <GenresPage/>
-            },
-            {
-                path: '/search', element: <SearchPage/>, children: [
                     {
-                        path: 'movie', element: <SearchContainer/>
+                        path: '/genre/:id', element: <GenresPage/>
+                    },
+                    {
+                        path: '/search', element: <SearchPage/>
                     }
-                ]
-            }
             ]
     }
 ])
