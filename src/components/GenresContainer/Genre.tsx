@@ -1,6 +1,7 @@
 import {FC, PropsWithChildren} from "react";
+import {useNavigate} from "react-router-dom";
+
 import {IGebresRes} from "../../interfaces";
-import {NavLink, useNavigate} from "react-router-dom";
 
 interface IProps extends PropsWithChildren {
     genre:IGebresRes
@@ -13,7 +14,7 @@ const Genre: FC<IProps> = ({genre}) => {
 
     return (
         <div>
-            <div onClick={() => navigate('genre', {state:{genre}})}>{name}</div>
+            <div onClick={() => navigate(`genre/${id}`, {state:{genre}})}>{name}</div>
         </div>
     );
 };

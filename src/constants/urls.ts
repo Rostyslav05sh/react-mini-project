@@ -4,7 +4,8 @@ const genres = '/genre/movie/list'
 const poster ='https://image.tmdb.org/t/p/w500'
 const movies = '/discover/movie'
 const movieIdFind = '/movie'
-
+const genre = '/genre'
+const genreMovies = '/movies'
 
 const urls = {
     movies: {
@@ -14,7 +15,8 @@ const urls = {
         movieImageById: (id:number) => `/movie/${id}/images`
     },
     genres: {
-        base: genres
+        base: genres,
+        moviesByGenres:(id:string) => `${genre}/${id}${genreMovies}`
     }
 }
 

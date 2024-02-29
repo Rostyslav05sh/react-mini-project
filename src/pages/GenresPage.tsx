@@ -1,24 +1,33 @@
 import {IGebresRes, IMovie} from "../interfaces";
-import {useEffect, useState} from "react";
-import {movieService} from "../services";
+import React, {useEffect, useState} from "react";
+import {genreService} from "../services";
 import {useAppLocation} from "../hooks/useAppLocation";
-import {MoviesListCard} from "../components";
-import {MovieByGenre} from "../components/GenresContainer/MovieByGenre";
+import {MoviesByGenre} from "../components/GenresContainer/MoviesByGenre";
+import {usePageQuery} from "../hooks";
+
 
 const GenresPage= () => {
 
-    const [movieByGenre, setMovieByGenre] = useState<IMovie>()
+    const [movieByGenre, setMovieByGenre] = useState<IMovie>({page:null, results: []})
+    const {state: {genre}} = useAppLocation<{genre: IGebresRes}>();
+    const {page, prev, next} = usePageQuery();
+
+    console.log(genre)
+
 
     useEffect(() => {
-        movieService.getAll('page').then(({data}) => {
+        genreService.getMoviesByGenres(genre.id.toString(), page).then(({data}) => {
             setMovieByGenre(data)
         })
-    }, []);
+    }, [genre.id, page]);
+
     const movies = movieByGenre.results
 
     return (
         <div>
-            {movies.map(movie =>  <MovieByGenre key={movie.id} movie={movie}/>)}
+            <button onClick={prev} disabled={+page === 1}>prev</button>
+            <button onClick={next} disabled={+page === 500}>next</button>
+            {movies.map(movie =>  <MoviesByGenre key={movie.id} movie={movie}/>)}
         </div>
     );
 };
