@@ -1,22 +1,30 @@
-import {useAppLocation} from "../hooks/useAppLocation";
-import {IMovie, IMovieRes} from "../interfaces";
 import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
+
+import {useAppLocation} from "../hooks/useAppLocation";
+import {IMovieRes} from "../interfaces";
 import {movieService} from "../services";
 import {MovieInfo} from "../components";
 
 const MovieInfoPage = () => {
-    const {state} = useAppLocation<{movie: IMovieRes}>();
+    const {state} = useAppLocation<{movie: IMovieRes, movieByKeyWord: IMovieRes}>();
     const [movieInfo, setMovieInfo] = useState<IMovieRes>(null)
     const {id} = useParams();
+
+
 
     useEffect(() => {
         if (state?.movie) {
             setMovieInfo(state.movie)
-        } else {
+        } else if (state?.movieByKeyWord) {
+            setMovieInfo(state.movieByKeyWord)
+        }
+        else {
             movieService.getMovieById(+id).then(({data}) => setMovieInfo(data))
         }
     }, [id, state]);
+
+    console.log('movieInfo', movieInfo);
 
 
     return (

@@ -5,22 +5,27 @@ import {genreService} from "../services";
 import {useAppLocation} from "../hooks/useAppLocation";
 import {MoviesByGenre} from "../components/GenresContainer/MoviesByGenre";
 import {usePageQuery} from "../hooks";
+import {useParams, useSearchParams} from "react-router-dom";
 
 
 const GenresPage= () => {
 
     const [movieByGenre, setMovieByGenre] = useState<IMovie>({page:null, results: []})
-    const {state: {genre}} = useAppLocation<{genre: IGebresRes}>();
     const {page, prev, next} = usePageQuery();
 
-    console.log(genre)
+    const [query, setQuery] = useSearchParams({page: '1'});
+    const {id} = useParams();
+
+
+    const genreId = id
+    console.log(genreId)
 
 
     useEffect(() => {
-        genreService.getMoviesByGenres(genre.id.toString(), page).then(({data}) => {
+        genreService.getMoviesByGenres(genreId.toString(), page).then(({data}) => {
             setMovieByGenre(data)
         })
-    }, [genre.id, page]);
+    }, [genreId, page]);
 
     const movies = movieByGenre.results
 

@@ -1,4 +1,3 @@
-import {ISearchKeyWord} from "../interfaces/searchInterface";
 
 const baseURL = 'https://api.themoviedb.org/3'
 const genres = '/genre/movie/list'

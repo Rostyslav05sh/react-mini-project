@@ -12,9 +12,12 @@ const Genre: FC<IProps> = ({genre}) => {
     const {id, name} = genre;
     const navigate = useNavigate();
 
+// , {state:{id}}
+
+
     return (
         <div>
-            <div onClick={() => navigate(`genre/${id}`, {state:{genre}})}>{name}</div>
+            <div onClick={() => navigate(`genre/${id}`)}>{name}</div>
         </div>
     );
 };
