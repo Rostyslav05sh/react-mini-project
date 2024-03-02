@@ -4,7 +4,6 @@ import {useNavigate} from "react-router-dom";
 
 import {IMovieRes} from "../../interfaces";
 import {poster} from "../../constants";
-import {usePageQuery} from "../../hooks";
 
 interface IProps extends PropsWithChildren {
     movieByKeyWord:IMovieRes

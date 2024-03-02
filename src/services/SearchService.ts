@@ -1,7 +1,7 @@
 import {apiService} from "./ApiService";
 import {urls} from "../constants";
 import {IRes} from "../types";
-import {ISearch, ISearchKeyWord} from "../interfaces/searchInterface";
+import {ISearch} from "../interfaces/searchInterface";
 
 const searchService = {
     getAllByKeyWord: (word:string, page:string):IRes<ISearch> => apiService.get(urls.search.searchByKeyWord(word), {params: {page}})

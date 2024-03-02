@@ -5,8 +5,6 @@ import {GenresPage, MoviesPage} from "./pages";
 import {MainLayout} from "./layouts";
 import {MovieInfoPage} from "./pages/MovieInfoPage";
 import {SearchPage} from "./pages/SearchPage";
-import {SearchMoviesByKeyWord} from "./components/SearchContainer/SearchMoviesByKeyWord";
-import {SearchForm} from "./components/SearchContainer/SearchForm";
 const router = createBrowserRouter([
     {
         path: '', element: <MainLayout/>, children: [
