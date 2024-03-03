@@ -1,0 +1,107 @@
+.Header {
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px;
+    background-color: #073590;
+    position: fixed;
+    z-index: 10;
+}
+
+.DarkTheme {
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px;
+    background-color: #001a3b;
+    position: fixed;
+    z-index: 10;
+}
+
+.headerLogo {
+    cursor: pointer;
+    color: white;
+    margin-left: 5vw;
+}
+
+.headerBlock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 30vw;
+    align-items: center;
+    margin-right: 5vw;
+    z-index: 10;
+}
+
+.headerGenresActive {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: solid 1px;
+    top: 10vh;
+    left: 0;
+    height: 90vh;
+    width: 30vh;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: .5vw;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: all .3s linear;
+}
+
+.headerBtnGenre {
+    background-color: #ff8712;
+    font-weight: bold;
+    border: none;
+    font-size: 18px;
+    border-radius: .5vh;
+    height: 5vh;
+    width: 10vw;
+    transition: .5s;
+}
+
+.headerBtnGenre:hover {
+    background-color: #f77737;
+    cursor: pointer;
+    transition: .5s;
+    color: white;
+}
+
+.headerBtnSearch {
+    background-color: #ff8712;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: .5vh;
+    height: 5vh;
+    width: 10vw;
+    transition: .5s;
+}
+
+.headerBtnSearch:hover {
+    background-color: #f77737;
+    cursor: pointer;
+    transition: .5s;
+    color: white;
+}
+
+.headerBlockGenres {
+    width: 10vw;
+    height: 3vh;
+    gap: 1vh;
+    padding: 1.5vh 0 0 2vw;
+    transition: .5s;
+    font-size: 20px;
+}
+
+.headerBlockGenres:hover {
+    color: #f77737;
+    cursor: pointer;
+    transition: .5s;
+}

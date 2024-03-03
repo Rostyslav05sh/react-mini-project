@@ -1,0 +1,84 @@
+.SearchForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 15vh;
+}
+
+.SearchFormDark {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 15vh;
+    background-color: black;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.SearchFormMovies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top:10vh;
+}
+
+.SearchFormButton {
+    background-color: #ff8712;
+    font-weight: bold;
+    border: none;
+    font-size: 18px;
+    border-radius: .5vh;
+    height: 5vh;
+    width: 10vw;
+    transition: .5s;
+}
+
+.SearchFormButton:hover {
+    background-color: #f77737;
+    cursor: pointer;
+    transition: .5s;
+    color: white;
+}
+
+.SearchFormPageCounter {
+    background-color: #ff8712;
+    font-weight: bold;
+    border: solid 1px;
+    font-size: 18px;
+    border-radius: .5vh;
+    height: 5vh;
+    width: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
+.SearchFormNavCont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70vw;
+}
+
+.SearchFormNavContDisplayNone {
+    display: none;
+}
+
+.SearchFormCont {
+    display: flex;
+    width: 45vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.SearchFormInput {
+    width: 30vw;
+    height: 5vh;
+    border-radius: 15vw;
+    border: .5px solid;
+
+}

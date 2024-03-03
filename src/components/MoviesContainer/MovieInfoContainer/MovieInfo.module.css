@@ -1,0 +1,92 @@
+.MovieInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 16vh;
+    gap: 2vw;
+    min-height: 90vh;
+}
+
+.MovieInfoDark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 16vh;
+    gap: 2vw;
+    min-height: 90vh;
+    background-color: black;
+}
+
+.MovieInfoDescription {
+    gap: 5vh;
+}
+
+.MovieInfoTitle {
+    font-size: 26px;
+    font-weight: bold;
+    width: 22vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MovieInfoTitleDark {
+    font-size: 26px;
+    font-weight: bold;
+    width: 22vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.MovieInfoImage {
+    width: 25vw;
+}
+
+.MovieInfoOverview {
+    width: 30vw;
+    font-size: 20px;
+    padding-bottom: 3vh;
+}
+
+.MovieInfoOverviewDark {
+    width: 30vw;
+    font-size: 20px;
+    padding-bottom: 3vh;
+    color: white;
+}
+
+.MovieInfoGenresCont {
+    padding-bottom: 3vh;
+}
+
+.MovieInfoGenresCont span {
+    background-color: #ff8712;
+    border-radius: .5vw;
+    padding: .5vh;
+    margin: .5vw;
+    transition: .5s;
+}
+
+.MovieInfoGenresCont span:hover {
+    background-color: #f77737;
+    cursor: pointer;
+    color: white;
+    transition: .5s;
+}
+
+.MovieInfoReleaseDate {
+    padding-bottom: 3vh;
+}
+
+.MovieInfoReleaseDateDark {
+    padding-bottom: 3vh;
+    color: white;
+}
+
+.MovieInfoReleaseDateDark {
+    color: white;
+}

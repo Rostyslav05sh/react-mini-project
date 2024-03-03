@@ -12,12 +12,11 @@ const urls = {
     movies: {
         base: movies,
         movieById:(id:number) => `${movieIdFind}/${id}`,
-        moviePosterByPoster_path: (poster_path: string) => `${poster_path}`,
-        movieImageById: (id:number) => `/movie/${id}/images`
     },
     genres: {
         base: genres,
-        moviesByGenres:(id:string) => `${genre}/${id}${genreMovies}`
+        moviesByGenres:(id:string) => `${genre}/${id}${genreMovies}`,
+        genreById: (id:number) => `${genre}/${id}`
     },
     search: {
         searchByKeyWord: (word:string) => `${search}/${word}`

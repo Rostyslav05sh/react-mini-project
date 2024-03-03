@@ -1,10 +1,10 @@
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 
-import {useAppLocation} from "../hooks/useAppLocation";
 import {IMovieRes} from "../interfaces";
 import {movieService} from "../services";
 import {MovieInfo} from "../components";
+import {useAppLocation} from "../hooks";
 
 const MovieInfoPage = () => {
     const {state} = useAppLocation<{movie: IMovieRes, movieByKeyWord: IMovieRes}>();

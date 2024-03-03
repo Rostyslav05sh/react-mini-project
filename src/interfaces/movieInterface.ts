@@ -5,6 +5,7 @@ export interface IMovie {
     total_results?: number;
 }
 export interface IMovieRes {
+    name:string
     adult: boolean;
     genre_ids: number[];
     id: number;

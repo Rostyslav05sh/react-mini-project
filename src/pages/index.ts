@@ -1,2 +1,5 @@
 export * from './MoviesPage'
-export * from './GenresPage'
+export * from './GenresPageContainer/GenresPage'
+export * from './GenresPageContainer/GenresPage.module.css'
+export * from './MovieInfoPage'
+export * from './SearchPage'

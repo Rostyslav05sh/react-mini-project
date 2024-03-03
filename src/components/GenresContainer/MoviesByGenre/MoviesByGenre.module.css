@@ -1,0 +1,32 @@
+.MoviesByGenre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1vw;
+    cursor: pointer;
+}
+
+.MoviesByGenreTitle {
+    font-size: 26px;
+    font-weight: bold;
+    width: 22vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MoviesByGenreTitleDark {
+    font-size: 26px;
+    font-weight: bold;
+    width: 22vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.MoviesByGenreImage {
+    width: 22vw;
+}

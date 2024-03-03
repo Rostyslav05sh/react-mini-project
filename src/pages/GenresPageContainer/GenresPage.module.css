@@ -1,0 +1,54 @@
+.GenresPage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top:10vh;
+}
+
+.GenresPageDark {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top:10vh;
+    background-color: black;
+}
+
+.MoviesListButton {
+    background-color: #ff8712;
+    font-weight: bold;
+    border: none;
+    font-size: 18px;
+    border-radius: .5vh;
+    height: 5vh;
+    width: 10vw;
+    transition: .5s;
+}
+
+.MoviesListButton:hover {
+    background-color: #f77737;
+    cursor: pointer;
+    transition: .5s;
+    color: white;
+}
+
+.MoviesListPageCounter {
+    background-color: #ff8712;
+    font-weight: bold;
+    border: solid 1px;
+    font-size: 18px;
+    border-radius: .5vh;
+    height: 5vh;
+    width: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MovieListNavCont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70vw;
+}

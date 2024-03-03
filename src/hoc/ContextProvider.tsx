@@ -1,27 +1,23 @@
-import {createContext, FC, PropsWithChildren, useState} from "react";
+import { createContext, FC, PropsWithChildren, useState } from "react";
 
-const Context = createContext(null)
-interface IProps extends PropsWithChildren {
+const Context = createContext(null);
 
-}
+interface IProps extends PropsWithChildren {}
 
-const ContextProvider: FC<IProps> = ({children}) => {
+const ContextProvider: FC<IProps> = ({ children }) => {
+    const [darkMode, setDarkMode] = useState(false);
 
-    const [themeSwitch, setThemeSwitch] = useState(null)
-    const themeSwitcher = () => {
-        // setThemeSwitch()
-    }
+    const toggleDarkMode = () => {
+        setDarkMode((prevDarkMode) => !prevDarkMode);
+    };
 
     return (
         <div>
-            <Context.Provider value={themeSwitch}>
+            <Context.Provider value={{ darkMode, toggleDarkMode }}>
                 {children}
             </Context.Provider>
         </div>
     );
 };
 
-export {
-    ContextProvider,
-    Context
-};
+export { ContextProvider, Context };

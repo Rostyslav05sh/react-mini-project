@@ -1,8 +1,8 @@
-import {FC, PropsWithChildren, useEffect, useState} from "react";
-import {ISearchRes} from "../../interfaces/searchInterface";
-import {IMovieRes} from "../../interfaces";
+import React, {FC, PropsWithChildren, useEffect, useState} from "react";
+
+import {IMovieRes, ISearchRes} from "../../interfaces";
 import {movieService} from "../../services";
-import {SearchMoviesByKeyWord} from "./SearchMoviesByKeyWord";
+import {SearchMoviesByKeyWord} from "./SearchMoviesByKeyWord/SearchMoviesByKeyWord";
 
 interface IProps extends PropsWithChildren {
     word:ISearchRes

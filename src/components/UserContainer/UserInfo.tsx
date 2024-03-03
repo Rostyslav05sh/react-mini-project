@@ -1,13 +1,14 @@
-import {FC, PropsWithChildren} from "react";
-
+import React, {FC, PropsWithChildren} from "react";
+import {Avatar} from "@mui/material";
 interface IProps extends PropsWithChildren {
 
 }
 
 const UserInfo: FC<IProps> = () => {
+
     return (
         <div>
-            UserInfo
+            <Avatar src="/broken-image.jpg"/>
         </div>
     );
 };

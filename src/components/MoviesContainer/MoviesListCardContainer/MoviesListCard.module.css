@@ -1,0 +1,33 @@
+.MoviesListCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1vw;
+    cursor: pointer;
+}
+
+.MoviesListCardTitle {
+    font-size: 26px;
+    font-weight: bold;
+    width: 22vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MoviesListCardTitleDark {
+    font-size: 26px;
+    font-weight: bold;
+    width: 22vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.MoviesListCardImage {
+    width: 22vw;
+}
+
